@@ -23,6 +23,7 @@ namespace Sorts.Consoles
                 SortTest((data) => Array.Sort(data), originalData, sortedData);
                 SortTest((data) => ExchangeSort.Sort(data), originalData, sortedData);
                 SortTest((data) => InsertionSort.Sort(data), originalData, sortedData);
+                SortTest((data) => ShellSort.Sort(data), originalData, sortedData);
                 Console.WriteLine();
             }
         }

@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 
 namespace Sorts.Tests
 {
-    [TestClass]
     public abstract class SortTestsBase
     {
         protected const int DataLength = 100;
