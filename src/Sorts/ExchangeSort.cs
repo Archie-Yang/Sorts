@@ -24,11 +24,9 @@ namespace Sorts
         /// <param name="comparison">Comparison method.</param>
         public static void Sort<T>(T[] arr, Comparison<T> comparison)
         {
-            var count = arr.Length;
-            var margin = count - 1;
-            for (var i = 0; i < margin; ++i)
+            for (var i = 0; i < arr.Length - 1; ++i)
             {
-                for (var j = i + 1; j < count; ++j)
+                for (var j = i + 1; j < arr.Length; ++j)
                 {
                     if (comparison(arr[i], arr[j]) > 0)
                     {
