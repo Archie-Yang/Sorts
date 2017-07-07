@@ -26,13 +26,13 @@ namespace Sorts
         /// <param name="divisor">Divisor for gap calculation.</param>
         public static void Sort<T>(T[] arr, Comparison<T> comparison, int divisor = 2)
         {
-            for (int length = arr.Length, gap = length / divisor; ; gap /= divisor)
+            for (var gap = arr.Length / divisor; ; gap /= divisor)
             {
                 if (gap == 0)
                 {
                     gap = 1;
                 }
-                for (var target = gap; target < length; ++target)
+                for (var target = gap; target < arr.Length; ++target)
                 {
                     var value = arr[target];
                     var offset = target;
