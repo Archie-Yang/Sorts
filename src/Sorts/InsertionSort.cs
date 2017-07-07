@@ -25,8 +25,7 @@ namespace Sorts
         public static void Sort<T>(T[] arr, Comparison<T> comparison)
         {
             T value;
-            int length = arr.Length, target = 0, offset, previous;
-            for (; ++target < length;)
+            for (int length = arr.Length, target = 0, offset, previous; ++target < length;)
             {
                 value = arr[target];
                 for (offset = previous = target; offset > 0 && comparison(arr[--previous], value) > 0; arr[offset--] = arr[previous]) ;
