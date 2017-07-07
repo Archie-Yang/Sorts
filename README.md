@@ -6,6 +6,9 @@
 
 - Exchange Sort
 - Insertion Sort
+- Shell Sort
+
+> Continue...
 
 ## Projects
 
