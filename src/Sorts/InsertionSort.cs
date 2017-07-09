@@ -24,15 +24,15 @@ namespace Sorts
         /// <param name="comparison">Comparison method.</param>
         public static void Sort<T>(T[] arr, Comparison<T> comparison)
         {
-            for (var target = 0; ++target < arr.Length;)
+            var length = arr.Length;
+            for (var right = 1; right < length; right++)
             {
-                var value = arr[target];
-                var offset = target;
-                var previous = target;
-                for (; offset > 0 && comparison(arr[--previous], value) > 0; arr[offset--] = arr[previous]) ;
-                if (target != offset)
+                var value = arr[right];
+                var left = right;
+                for (; left > 0 && comparison(arr[left - 1], value) > 0; arr[left] = arr[--left]) ;
+                if (left != right)
                 {
-                    arr[offset] = value;
+                    arr[left] = value;
                 }
             }
         }
