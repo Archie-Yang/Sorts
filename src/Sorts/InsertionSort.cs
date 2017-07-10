@@ -30,10 +30,7 @@ namespace Sorts
                 var value = arr[right];
                 var left = right;
                 for (; left > 0 && comparison(arr[left - 1], value) > 0; arr[left] = arr[--left]) ;
-                if (left != right)
-                {
-                    arr[left] = value;
-                }
+                arr[left] = value;
             }
         }
 

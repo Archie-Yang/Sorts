@@ -34,10 +34,7 @@ namespace Sorts
                     var value = arr[right];
                     var left = right;
                     for (; left >= gap && comparison(arr[left - gap], value) > 0; arr[left] = arr[left -= gap]) ;
-                    if (left != right)
-                    {
-                        arr[left] = value;
-                    }
+                    arr[left] = value;
                 }
             }
             InsertionSort.Sort(arr, comparison);
