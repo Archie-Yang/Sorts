@@ -25,6 +25,8 @@ namespace Sorts.Consoles
                 SortTest((data) => InsertionSort.Sort(data), originalData, sortedData);
                 SortTest((data) => ShellSort.Sort(data), originalData, sortedData);
                 SortTest((data) => ShellSortOeisA003462.Sort(data), originalData, sortedData);
+                SortTest((data) => ShellSortParallel.Sort(data), originalData, sortedData);
+                SortTest((data) => ShellSortOeisA003462Parallel.Sort(data), originalData, sortedData);
                 Console.WriteLine();
             }
         }
@@ -36,7 +38,7 @@ namespace Sorts.Consoles
             _stopWatch.Restart();
             sortMethod(data);
             _stopWatch.Stop();
-            Console.Write(data.SequenceEqual(sortedData) ? $"{_stopWatch.Elapsed}\t" : "X\t");
+            Console.Write(data.SequenceEqual(sortedData) ? $"{_stopWatch.Elapsed} " : "X ");
         }
     }
 }
