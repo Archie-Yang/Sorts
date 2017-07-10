@@ -7,6 +7,8 @@
 - Exchange Sort
 - Insertion Sort
 - Shell Sort
+  - Division.
+  - OEIS A003462 sequence.
 
 > Continue...
 
