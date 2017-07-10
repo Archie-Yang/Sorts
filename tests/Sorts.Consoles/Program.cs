@@ -24,6 +24,7 @@ namespace Sorts.Consoles
                 SortTest((data) => ExchangeSort.Sort(data), originalData, sortedData);
                 SortTest((data) => InsertionSort.Sort(data), originalData, sortedData);
                 SortTest((data) => ShellSort.Sort(data), originalData, sortedData);
+                SortTest((data) => ShellSortOeisA003462.Sort(data), originalData, sortedData);
                 Console.WriteLine();
             }
         }
